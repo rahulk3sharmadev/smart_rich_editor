@@ -1,0 +1,24 @@
+name: smart_rich_editor
+description: A lightweight, collapsible, and feature-rich text editor built on top of flutter_quill.
+version: 1.0.0
+homepage: https://github.com/rahulk3sharmadev/smart_rich_editor
+repository: https://github.com/rahulk3sharmadev/smart_rich_editor
+issue_tracker: https://github.com/rahulk3sharmadev/smart_rich_editor/issues
+
+environment:
+  sdk: '>=3.2.0 <4.0.0'
+  flutter: ">=3.13.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_quill: ^11.4.2
+#  flutter_quill_extensions: ^11.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
