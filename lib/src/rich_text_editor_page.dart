@@ -1,11 +1,14 @@
 // Imports
 import 'dart:convert';
-import 'dart:html' as html; // For Web clipboard
 import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_quill/flutter_quill.dart';
 import 'package:flutter_quill/quill_delta.dart';
+// import 'package:flutter_quill_extensions/flutter_quill_extensions.dart';
+
+// ignore: avoid_web_libraries_in_flutter
+import 'dart:html' as html show window, KeyboardEvent;
 
 /// ✅ Safe JSON encode/decode for clipboard
 String safeJsonEncode(Object data) {
@@ -68,17 +71,19 @@ class _RichTextEditorPageState extends State<RichTextEditorPage> {
   }
 
   void _registerWebShortcuts() {
-    html.window.onKeyDown.listen((html.KeyboardEvent e) {
-      final bool isCtrlOrMeta = e.ctrlKey || e.metaKey;
-      if (isCtrlOrMeta && e.key?.toLowerCase() == 'c') {
-        e.preventDefault();
-        _handleCopy();
-      }
-      if (isCtrlOrMeta && e.key?.toLowerCase() == 'v') {
-        e.preventDefault();
-        _handlePaste();
-      }
-    });
+    if (kIsWeb) {
+      html.window.onKeyDown.listen((html.KeyboardEvent e) {
+        final bool isCtrlOrMeta = e.ctrlKey || e.metaKey;
+        if (isCtrlOrMeta && e.key?.toLowerCase() == 'c') {
+          e.preventDefault();
+          _handleCopy();
+        }
+        if (isCtrlOrMeta && e.key?.toLowerCase() == 'v') {
+          e.preventDefault();
+          _handlePaste();
+        }
+      });
+    }
   }
 
   @override
@@ -347,7 +352,7 @@ class _RichTextEditorPageState extends State<RichTextEditorPage> {
           borderRadius: BorderRadius.circular(8),
           boxShadow: [
             BoxShadow(
-              color: Color.fromARGB(13, 0, 0, 0),
+              color: Colors.black.withAlpha(12), // 12 ≈ 0.05 * 255
               blurRadius: 4,
               offset: const Offset(0, 2),
             ),
@@ -439,6 +444,3 @@ class CustomImageEmbedBuilder implements EmbedBuilder {
     return WidgetSpan(child: child);
   }
 }
-
-
-
