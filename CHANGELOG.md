@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.0.1] - 2024-10-31
+## [1.0.2] - 2024-10-31
 
 ### Added
 - 🎨 Collapsible toolbar functionality for space-efficient editing
@@ -42,8 +42,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Contributing guidelines
 
 ### Dependencies
-- flutter_quill: ^10.0.0
-- flutter_quill_extensions: ^10.0.0
+- flutter_quill: ^11.4.2
 
 ### Platform Support
 - ✅ Android (API 21+)
@@ -75,6 +74,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Version History
 
+- **1.0.2** - Enhance versioned for copy and paste
 - **1.0.1** - Initial public release with core features
 - **1.0.0** - Internal beta version
 
@@ -91,7 +91,7 @@ If you encounter any bugs or have feature requests, please:
 
 ## Migration Guide
 
-### Migrating to 1.0.1
+### Migrating to 1.0.2
 This is the initial release, no migration needed.
 
 ---

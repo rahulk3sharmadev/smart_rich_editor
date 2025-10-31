@@ -8,7 +8,7 @@ A lightweight, highly customizable, and production-ready rich text editor for Fl
 ## ✨ Features
 
 - 🎨 **Collapsible Toolbar** - Toggle between basic and full editing modes
-- 📋 **Rich Text Copy/Paste** - Preserve formatting across clipboard operations
+- 📋 **Rich Text Copy/Paste** - Preserve formatting when copying/pasting via toolbar buttons or keyboard shortcuts (Ctrl+C/Ctrl+V)
 - 🌐 **Web Optimized** - Full clipboard API support for web platforms
 - 🖼️ **Image Support** - Built-in image embedding capabilities
 - ⚙️ **Highly Customizable** - Configure height, toolbar position, and appearance
@@ -22,7 +22,6 @@ A lightweight, highly customizable, and production-ready rich text editor for Fl
 |--------|-----|--------|
 | ![Mobile](https://raw.githubusercontent.com/rahulk3sharmadev/smart_rich_editor/main/screenshots/mobile.png) | ![Web](https://raw.githubusercontent.com/rahulk3sharmadev/smart_rich_editor/main/screenshots/web.png) | ![Tablet](https://raw.githubusercontent.com/rahulk3sharmadev/smart_rich_editor/main/screenshots/tablet.png) |
 
-> *Add screenshots to `/screenshots` folder in your repository*
 
 ## 🚀 Getting Started
 
@@ -220,7 +219,8 @@ For web platform, ensure you have the following in your `index.html`:
 This package depends on:
 
 - [`flutter_quill`](https://pub.dev/packages/flutter_quill) - Core rich text editing functionality
-- [`flutter_quill_extensions`](https://pub.dev/packages/flutter_quill_extensions) - Extended features and embeds
+
+[//]: # (- [`flutter_quill_extensions`]&#40;https://pub.dev/packages/flutter_quill_extensions&#41; - Extended features and embeds)
 
 ## 🐛 Troubleshooting
 
@@ -270,8 +270,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 **Rahul Sharma**
 
 - GitHub: [@rahulk3sharmadev](https://github.com/rahulk3sharmadev)
-- Email: contact@example.com
-- LinkedIn: [Rahul Sharma](https://linkedin.com/in/rahulk3sharma)
+- Email: rahulk3sharmadev@gmail.com
+- LinkedIn: [Rahul Sharma](https://www.linkedin.com/in/rahul-sharma-b1106917a)
 
 ## 💖 Support
 
@@ -299,6 +299,7 @@ If you find this package helpful, please:
 - [ ] Enhanced mobile keyboard handling
 - [ ] Table support
 - [ ] Code syntax highlighting
+- [ ] Image embedding low support
 
 ## 📈 Version History
 
